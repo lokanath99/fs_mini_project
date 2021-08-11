@@ -16,9 +16,9 @@ def search_key(key):
     pos = -1
     while line :
         data = line.split("|")
-        if data[0][1] == "*":
-            line = index_file.readline()
-        elif data[1] == key:
+        # if data[0][1] == "*":
+        #     line = index_file.readline()
+        if data[1] == key:
             pos = data[0]
             return  pos
         else:
@@ -68,10 +68,10 @@ def find_index_pos(key):
     line = index_file.readline()
     while line :
         data = line.split("|")
-        if data[0][1] == "*":
-            pos = index_file.tell()
-            line = index_file.readline()
-        elif data[1]==key:
+        # if data[0][1] == "*":
+        #     pos = index_file.tell()
+        #     line = index_file.readline()
+        if data[1]==key:
             return int(pos)
         else:
             pos = index_file.tell()
