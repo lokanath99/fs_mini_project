@@ -1,0 +1,1 @@
+Case_Type	Cases	Difference	Date	Country_Region	Province_State	FIPS
