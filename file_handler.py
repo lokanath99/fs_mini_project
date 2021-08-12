@@ -63,7 +63,7 @@ def write_modified(cases, difference, pos):
 
 def find_index_pos(key):
     index_file = open('./Files/index.txt', 'r+')
-    pos = index_file.tell()
+    pos = int(index_file.tell())
     keyf = key+"\n"
     line = index_file.readline()
     while line :
@@ -71,7 +71,7 @@ def find_index_pos(key):
         # if data[0][1] == "*":
         #     pos = index_file.tell()
         #     line = index_file.readline()
-        if data[1]==key:
+        if data[1]==keyf:
             return int(pos)
         else:
             pos = index_file.tell()
